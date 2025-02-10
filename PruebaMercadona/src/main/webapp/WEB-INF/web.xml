@@ -1,0 +1,44 @@
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
+	<servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>tienda.controladores.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ListadoProductosServlet</servlet-name>
+        <servlet-class>tienda.controladores.ListadoProductosServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ListadoProductosServlet</servlet-name>
+        <url-pattern>/ListadoProductosServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+    <servlet-name>ProductoServlet</servlet-name>
+    <servlet-class>tienda.controladores.ProductoServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	    <servlet-name>ProductoServlet</servlet-name>
+	    <url-pattern>/ProductoServlet</url-pattern>
+	</servlet-mapping>
+	
+	<resource-ref>
+	    <description>DataSource PruebaMercadona</description>
+	    <res-ref-name>jdbc/PruebaMercadonaDS</res-ref-name>
+	    <res-type>javax.sql.DataSource</res-type>
+	    <res-auth>Container</res-auth>
+	</resource-ref>
+		
+    
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
